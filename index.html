@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+
+		<title>jQuery Plugin - A  Plugin</title>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.plugin.min.js"></script>
+
+		<style type="text/css">
+			body { background: url('img/background.gif'); font: normal 11px verdana; }
+
+			a#coffee { background: url('img/coffee.png') 6px 2px no-repeat #DC5; border: 1px solid #D9C640; border-radius: 4px; color: #FFF; display: block; float: right; font-size: 10px; font-weight: bold; letter-spacing: .9px; margin-right: 15px; padding: 4px 5px 4px 26px; text-decoration: none; -khtml-border-radius: 4px; -moz-border-radius: 4px; -opera-border-radius: 4px; -webkit-border-radius: 4px; }
+			a#coffee:hover { text-decoration: underline; }
+
+			div#link a { color: #EA9C00; font: bold 10px verdana; letter-spacing: .9px; text-decoration: none; }
+			div#link a:hover { color: #DC5; font-weight: bold; letter-spacing: .9px; text-decoration: underline; }
+
+			div#content { background-color: #FFF; border: 1px solid #DEDEDE; box-shadow: 0 1px 3px rgba(100, 100, 100, 0.4); margin: 0 auto; padding: 15px; width: 1100px; min-height: 510px; }
+
+			div#copy { margin: 0 auto; text-align: center; width: 1100px; }
+
+			div#header { margin: 0 auto; padding-left: 20px; width: 1130px; }
+
+			div#link { color: #AB9927; font: bold 14px 'Lucida Grande', 'Helvetica', 'Times New Roman', serif; text-shadow: 1px 1px 1px #FFF; text-transform: uppercase; }
+
+			div#rodape { clear: both; height: 25px; margin-top: 5px; width: 100%; }
+
+			div.description { color: #555; letter-spacing: .1px; margin-bottom: 10px; text-indent: 7px; text-align: left; }
+
+			div.left { float: left; }
+
+			div.notice { color: #777; font: 9px verdana; letter-spacing: 0.4px; margin-bottom: 9px; text-align: left; }
+
+			div.plugin-target { background-color: #F0F0F0; border-radius: 3px; float: left; height: 15px; margin-left: 5px; padding-bottom: 2px; padding-left: 8px; padding-right: 8px; text-align: center; width: 50px; }
+			div.plugin-target-number { float: left; margin-right: 5px; margin-top: 2px; }
+
+			div.session, div.session-first { font: bold 13px verdana; border-bottom: 1px solid #EFEFEF; color: #444; letter-spacing: .7px; margin-bottom: 18px; margin-top: 24px; text-align: left; width: 1081px; }
+			div.session-first { margin-top: 0 !important; }
+
+			div.source { background: #F8F8FF; border: 1px solid #EFEFEF; border-left: 3px solid #CCC; color: #444; font: 12px monospace; border-radius: 2px; letter-spacing: .1px; margin-bottom: 7px; margin-top: 15px; padding: 7px; width: 1081px; -khtml-border-radius: 2px; -moz-border-radius: 2px; -opera-border-radius: 2px; -webkit-border-radius: 2px; }
+
+			div.text { color: #555; letter-spacing: .1px; margin-bottom: 20px; margin-top: 15px; text-align: left; }
+
+			div.title { font: bold 17px verdana; color: #269; letter-spacing: .7px; margin-bottom: 20px; text-align: left; }
+
+			span#version { color: #777; font: 10px verdana; }
+
+			span.comment-html, span.comment-script { font: 12px monospace; letter-spacing: .1px; margin-bottom: 7px; margin-top: 5px; }
+			span.comment-html { color: #5E85DE; }
+			span.comment-script { color: #578F73; }
+		</style>
+
+		<script type="text/javascript">
+			// This code does NOT belong the plugin. See the example code at the bottom of this page.
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-xx7-x']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="title">jQuery Plugin - A  Plugin <span id="version">(current version: 0.1.0)</span></div>
+	
+			<div id="link">
+				<a href="http://github.com/downloads/wbotelhos/plugin/jquery.plugin-0.1.0.zip" target="_blank">Download</a> |
+				<a href="http://github.com/wbotelhos/plugin" target="_blank">Github</a> |
+				<a href="http://wbotelhos.com/plugin/changelog.txt" target="_blank">Change Log</a> |
+				<a href="http://wbotelhos.com/plugin/README.txt" target="_blank">Readme</a> |
+				<a href="http://www.wbotelhos.com/2011/xx/xx/jquery-plugin-a--plugin/" target="_blank">Doubt</a> |
+				<a href="http://wbotelhos.com/plugin/LICENSE.txt" target="_blank">Licence</a> |
+				<a href="http://www.wbotelhos.com/2011/xx/xx/jquery-plugin-a--plugin/" target="_blank style="color: #2C8CBD;">Article</a>
+			</div>
+
+			<a id="coffee" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X8HEP2878NDEG&amp;item_name=jQuery%20Plugin" target="_blank">buy me a coffee</a>
+	
+			<div class="text">jQuery <strong>Plugin</strong> is a plugin that  automatically.</div>
+		</div>
+
+		<div id="content">
+			<div id="default-demo" class="session-first">With default options:</div>
+	
+			<div id="default"></div>
+	
+			<div class="source">
+				$('#default').plugin();<br/><br/>
+				
+				&lt;div id="default"&gt;&lt;/div&gt;
+			</div>
+	
+			<span class="comment-script">
+				 - .<br/>
+			</span>
+
+			<div class="session">Default options:</div>
+
+			<div class="source">
+			 	attribute:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;null<br/>
+			 	<div class="notice">.</div>
+			</div>
+
+			<div class="session">Public functions:</div>
+			
+			<div class="source">$.fn.plugin.method(value, '#plugin');</div>
+			<div class="description">.</div>
+		</div>
+
+		<div id="rodape"><div id="copy">&copy; 2011 <a href="http://www.wbotelhos.com/" target="_blank">wbotelhos.com</a></div></div>
+
+		<script type="text/javascript">
+			$(function() {
+
+				$('#default').plugin();
+
+			});
+		</script>
+	</body>
+</html>
