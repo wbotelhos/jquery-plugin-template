@@ -1,8 +1,8 @@
 /**
- * jQuery Plugin - A Plugin - http://wbotelhos.com/plugin
+ * # jQuery ${NAME} - ${DESCRIPTION} - http://wbotelhos.com/${NAME_LOWER}
  * --------------------------------------------------------------------------
  *
  * 0.1.0
- *   - ;
+ *   - .
  *
  */
