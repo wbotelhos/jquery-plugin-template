@@ -6,13 +6,13 @@
  *
  * Licensed under The MIT License
  *
- * @version			0.1.0
- * @since			${CREATED_AT}
- * @author			Washington Botelho dos Santos
- * @documentation	http://wbotelhos.com/plugin
- * @twitter			http://twitter.com/wbotelhos
- * @license			http://opensource.org/licenses/mit-license.php
- * @package			jQuery Plugins
+ * @version        0.1.0
+ * @since          ${CREATED_AT}
+ * @author         Washington Botelho
+ * @documentation  http://wbotelhos.com/plugin
+ * @twitter        http://twitter.com/wbotelhos
+ * @license        http://opensource.org/licenses/mit-license.php
+ * @package        jQuery Plugins
  *
  * Usage with default values:
  * ---------------------------------------------------------------------------------
@@ -34,10 +34,9 @@
 		init: function(options) {
 			return this.each(function() {
 
-				var $this = $(this);
-
-				var opt				= $.extend({}, $.fn.NAME_LOWER.defaults, options),
-					id				= $this.data('options', opt).attr('id');
+				var opt		= $.extend({}, $.fn.NAME_LOWER.defaults, options),
+					$this	= $(this),
+					id		= $this.data('options', opt).attr('id');
 
 				
 			});
