@@ -32,7 +32,7 @@
 		init: function(options) {
 			return this.each(function() {
 
-				var opt		= $.extend({}, $.fn.NAME_LOWER.defaults, options),
+				var opt		= $.extend({}, $.fn.${NAME_LOWER}.defaults, options),
 					$this	= $(this),
 					id		= $this.data('options', opt).attr('id');
 
@@ -45,7 +45,7 @@
 		}
 	};
 
-	$.fn.NAME_LOWER = function(method) {
+	$.fn.${NAME_LOWER} = function(method) {
 		if (methods[method]) {
 			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
 		} else if (typeof method === 'object' || !method) {
@@ -55,7 +55,7 @@
 		} 
 	};
 
-	$.fn.NAME_LOWER.defaults = {
+	$.fn.${NAME_LOWER}.defaults = {
 		
 	};
 
