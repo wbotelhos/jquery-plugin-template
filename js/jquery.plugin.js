@@ -33,8 +33,9 @@
 			return this.each(function() {
 
 				var opt		= $.extend({}, $.fn.${NAME_LOWER}.defaults, options),
-					$this	= $(this),
-					id		= $this.data('options', opt).attr('id');
+					$this	= $(this);
+
+				$this.data('options', opt);
 
 				
 			});
