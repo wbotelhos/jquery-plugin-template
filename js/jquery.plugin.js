@@ -1,8 +1,8 @@
 /*!
- * jQuery ${NAME} - ${NAME} - http://wbotelhos.com/${NAME_LOWER}
+ * jQuery ${NAME} - ${DESCRIPTION} - http://wbotelhos.com/${NAME_LOWER}
  * ------------------------------------------------------------------------
  *
- * jQuery ${NAME} ${FULL_NAME}
+ * jQuery ${NAME} ${FULL_DESCRIPTION}
  *
  * Licensed under The MIT License
  *
