@@ -1,6 +1,6 @@
 /*!
  * jQuery ${NAME} - ${NAME} - http://wbotelhos.com/${NAME_LOWER}
- * ---------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------
  *
  * jQuery ${NAME} ${FULL_NAME}
  *
@@ -12,10 +12,9 @@
  * @documentation  http://wbotelhos.com/plugin
  * @twitter        http://twitter.com/wbotelhos
  * @license        http://opensource.org/licenses/mit-license.php
- * @package        jQuery Plugins
  *
  * Usage with default values:
- * ---------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------
  * $('#${NAME_LOWER}').${NAME_LOWER}();
  *
  * <div id="${NAME_LOWER}"></div>

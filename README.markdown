@@ -13,7 +13,6 @@ The jQuery ${NAME} is licensed under [The MIT License](http://www.opensource.org
 	@author         Washington Botelho
 	@documentation  wbotelhos.com/${NAME_LOWER}
 	@twitter        twitter.com/wbotelhos
-	@package        jQuery Plugins
 
 ## Required Files
 
