@@ -7,11 +7,10 @@
  * Licensed under The MIT License
  *
  * @version        0.1.0
- * @since          ${CREATED_AT}
+ * @since          ${SINCE}
  * @author         Washington Botelho
  * @documentation  http://wbotelhos.com/plugin
  * @twitter        http://twitter.com/wbotelhos
- * @license        http://opensource.org/licenses/mit-license.php
  *
  * Usage with default values:
  * ------------------------------------------------------------------------

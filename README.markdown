@@ -9,7 +9,7 @@ The jQuery ${NAME} is licensed under [The MIT License](http://www.opensource.org
 ## Version
 
 	@version        0.1.0
-	@since          ${CREATED_AT}
+	@since          ${SINCE}
 	@author         Washington Botelho
 	@documentation  wbotelhos.com/${NAME_LOWER}
 	@twitter        twitter.com/wbotelhos
