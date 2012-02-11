@@ -118,9 +118,21 @@
 			<div class="session">Default options:</div>
 
 			<div class="source">
-				${OPTION}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${VALUE}
+				${OPTION}&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: ${VALUE}
 				<div class="comment">${OPTION_DESCRIPTION}</div>
 			</div>
+
+			<div id="global-demo" class="session">Changing the settings globally:</div>
+
+			<div class="source">
+				$.fn.${NAME_LOWER}.defaults.${OPTION_1} = ${OPTION_1_VALUE};<br/>
+				$.fn.${NAME_LOWER}.defaults.${OPTION_2} = ${OPTION_1_VALUE};
+			</div>
+
+			<span class="comment">
+				- You can change any option mention the scope <b>$.fn.${NAME_LOWER}.defaults.</b> + <i>option_name</i>;<br/>
+				- This setup must be called before you bind the ${NAME}, of course.
+			</span>
 
 			<div class="session">Public functions:</div>
 			

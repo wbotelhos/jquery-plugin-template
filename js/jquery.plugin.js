@@ -9,8 +9,8 @@
  * @version        0.1.0
  * @since          ${SINCE}
  * @author         Washington Botelho
- * @documentation  http://wbotelhos.com/plugin
- * @twitter        http://twitter.com/wbotelhos
+ * @documentation  wbotelhos.com/${NAME_LOWER}
+ * @twitter        twitter.com/wbotelhos
  *
  * Usage with default values:
  * ------------------------------------------------------------------------
@@ -37,7 +37,12 @@
 
 				$this.data('options', opt);
 
-				
+				if ($this.data('${NAME_LOWER}')) {
+					return;
+				}
+
+				$this.data('${NAME_LOWER}', true);
+
 			});
 		}, debug: function(message) {
 			if (window.console && window.console.log) {
