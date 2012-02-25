@@ -32,22 +32,25 @@
 		init: function(options) {
 			return this.each(function() {
 
-				var opt		= $.extend({}, $.fn.${NAME_LOWER}.defaults, options),
-					$this	= $(this);
-
-				$this.data('options', opt);
-
+				var self	= this,
+					$this	= $(self);
+	
+				self.opt = $.extend({}, $.fn.${NAME_LOWER}.defaults, options);
+	
 				if ($this.data('${NAME_LOWER}')) {
 					return;
 				}
-
+	
 				$this.data('${NAME_LOWER}', true);
+	
+				var opt = self.opt;
 
+				
 			});
-		}, debug: function(message) {
-			if (window.console && window.console.log) {
-				window.console.log(message);
-			}
+		}, set: function(options) {
+			return this.each(function() {
+				this.opt = $.extend({}, $.fn.${LOWER_NAME}.defaults, $(this).data('options'), options);
+			});
 		}
 	};
 
