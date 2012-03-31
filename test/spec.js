@@ -1,4 +1,4 @@
-describe('Using ID', function() {
+describe('Normal', function() {
 
 	beforeEach(function() {
 	    $('body').append('<div id="${NAME_LOWER}"></div>');
@@ -8,40 +8,16 @@ describe('Using ID', function() {
 		$('#${NAME_LOWER}').remove();
 	});
 
-	it ('xpto should xpto', function() {
+	it ('[] should be chainable', function() {
 		// given
-		var $${NAME_LOWER} = $('#${NAME_LOWER}');
+		var $this		= $('#${NAME_LOWER}'),
+			className	= 'my-class';
 
 		// when
-		$${NAME_LOWER}.;
+		$this.${NAME_LOWER}().addClass(className);
 
 		// then
-	    expect($${NAME_LOWER}).toBetruthy();
-	});
-
-});
-
-describe('Using class', function() {
-
-	beforeEach(function() {
-	    $('body').append('<div class="${NAME_LOWER}"></div><div class="${NAME_LOWER}"></div><div class="${NAME_LOWER}"></div>');
-	});
-
-	afterEach(function() {
-		$('.${NAME_LOWER}').remove();
-	});
-
-	it ('xpto should xpto', function() {
-		// given
-		var $${NAME_LOWER}s = $('.${NAME_LOWER}');
-
-		// when
-		$${NAME_LOWER}s.;
-
-		// then
-	    expect($${NAME_LOWER}s.eq(0)).toBetruthy();
-	    expect($${NAME_LOWER}s.eq(1)).toBetruthy();
-	    expect($${NAME_LOWER}s.eq(2)).toBetruthy();
+	    expect($this).toHaveClass(className);
 	});
 
 });
