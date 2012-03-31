@@ -72,6 +72,18 @@
 
 			<hr />
 
+			<div id="global-demo" class="session">Changing the settings globally:</div>
+
+			<div class="source">
+				$.fn.catchy.defaults.${OPTION_1} = ${OPTION_1_VALUE};<br/>
+				$.fn.catchy.defaults.${OPTION_2} = ${OPTION_1_VALUE};
+			</div>
+
+			<span class="comment">
+				- You can change any option mention the scope <b>$.fn.${NAME_LOWER}.defaults.</b> + <i>option_name</i>;<br/>
+				- This setup must be called before you bind the ${NAME}, of course.
+			</span>
+
 			<div class="session">Public functions:</div>
 
 			<div class="source">$('#${NAME_LOWER}').${NAME_LOWER}('${METHOD}');</div>
