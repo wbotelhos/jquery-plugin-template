@@ -29,13 +29,13 @@
 ;(function($) {
 
 	var methods = {
-		init: function(options) {
+		init: function(settings) {
 			return this.each(function() {
 
 				var self	= this,
 					$this	= $(self);
 	
-				self.opt = $.extend({}, $.fn.${NAME_LOWER}.defaults, options);
+				self.opt = $.extend({}, $.fn.${NAME_LOWER}.defaults, settings);
 	
 				if ($this.data('${NAME_LOWER}')) {
 					return;
@@ -47,9 +47,11 @@
 
 				
 			});
-		}, set: function(options) {
+		}, set: function(settings) {
 			return this.each(function() {
-				this.opt = $.extend({}, $.fn.${LOWER_NAME}.defaults, $(this).data('options'), options);
+				var $this = $(this);
+
+				$this.${NAME_LOWER}($.extend({}, $this.data('settings'), settings));
 			});
 		}
 	};
