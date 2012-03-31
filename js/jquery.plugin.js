@@ -18,12 +18,6 @@
  *
  * <div id="${NAME_LOWER}"></div>
  *
- * $('.${NAME_LOWER}').${NAME_LOWER}();
- *
- * <div class="${NAME_LOWER}"></div>
- * <div class="${NAME_LOWER}"></div>
- * <div class="${NAME_LOWER}"></div>
- *
  */
 
 ;(function($) {
@@ -33,25 +27,22 @@
 			return this.each(function() {
 
 				var self	= this,
-					$this	= $(self);
+					$this	= $(self).empty().data('settings', self.opt);
 	
 				self.opt = $.extend({}, $.fn.${NAME_LOWER}.defaults, settings);
-	
-				if ($this.data('${NAME_LOWER}')) {
-					return;
-				}
-	
-				$this.data('${NAME_LOWER}', true);
-	
-				var opt = self.opt;
 
-				
+				$this.data('${NAME_LOWER}', true);
 			});
 		}, set: function(settings) {
 			return this.each(function() {
-				var $this = $(this);
+				var $this	= $(this),
+					actual	= $this.data('settings');
 
-				$this.${NAME_LOWER}($.extend({}, $this.data('settings'), settings));
+				$this.clone().insertBefore($this);
+
+				$this.remove();
+
+				$this.${NAME_LOWER}($.extend({}, actual, settings));
 			});
 		}
 	};
