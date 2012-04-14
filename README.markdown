@@ -2,10 +2,6 @@
 
 jQuery ${NAME} ${FULL_DESCRIPTION}
 
-## License
-
-The jQuery ${NAME} is licensed under [The MIT License](http://www.opensource.org/licenses/mit-license.php)
-
 ## Version
 
 	@version        0.1.0
