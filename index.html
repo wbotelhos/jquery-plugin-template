@@ -1,107 +1,150 @@
 <!DOCTYPE html>
 
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta http-equiv="Pragma" content="no-cache">
-		<meta http-equiv="Expires" content="-1">
-		<meta name="keywords" content="jquery,plugin," />
-		<meta name="description" content="jQuery ${NAME} - ${DESCRIPTION}" />
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width; initial-scale=1; maximum-scale=1" name="viewport">
 
-		<title>jQuery ${NAME} - ${DESCRIPTION}</title>
+  <title>JQuery ${name}</title>
 
-		<!-- This CSS does not belong to the plugin. -->
-		<link type="text/css" rel="stylesheet" href="doc/css/stylesheet.css"/>
+  <meta content="Washington Botelho" name="author">
+  <meta content="jQuery ${name} - ${title}" name="description">
+  <meta content="jquery,plugin,${keywords}" name="keywords">
 
-		<link type="text/css" rel="stylesheet" href="css/jquery.${NAME_LOWER}.css"/>
+	<link type="text/css" rel="stylesheet" href="demo/css/application.css">
+  <link type="text/css" rel="stylesheet" href="lib/jquery.${slug}.css" />
 
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.${NAME_LOWER}.min.js"></script>
+  <script type="text/javascript" src="demo/js/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.${slug}.min.js"></script>
 
-		<script type="text/javascript">
-			// This code does not belong to the plugin. See the example code at the bottom of this page.
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-${ANALYTICS}']);
-			_gaq.push(['_trackPageview']);
-			
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-	</head>
-	<body>
-		<div id="header">
-			<div id="title">
-				<a href="http://wbotelhos.com/${NAME_LOWER}">jQuery ${NAME} - ${DESCRIPTION}</a>
-				<span id="version">(current version: 0.1.0)</span>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+	<div id="wrapper">
+		<header role="banner">
+			<div id="logo">
+				<h1><a href="http://wbotelhos.com/${slug}" title="jQuery ${name}">jQuery ${name}</a></h1>
+				<p>${title}</p>
 			</div>
 
-			<div id="menu">
-				<a href="http://github.com/downloads/wbotelhos/${NAME_LOWER}/jquery.${NAME_LOWER}-0.1.0.zip" target="_blank">Download</a> |
-				<a href="http://github.com/wbotelhos/${NAME_LOWER}" target="_blank">Github</a> |
-				<a href="http://www.wbotelhos.com/${NAME_LOWER}/changelog.markdown" target="_blank">Change Log</a> |
-				<a href="http://www.wbotelhos.com/${NAME_LOWER}/README.markdown" target="_blank">Readme</a> |
-				<a href="http://www.wbotelhos.com/${BLOG_POST}" target="_blank">Article</a> |
-				<a href="http://www.opensource.org/licenses/mit-license.php" target="_blank">License</a> |
-				<a href="http://www.wbotelhos.com/${BLOG_POST}#comments" target="_blank" style="color: #2C8CBD;">Doubt</a> |
-				<a href="http://www.wbotelhos.com/lab" target="_blank" style="color: #000;">yLab</a>
-			</div>
+			<nav role="navigation">
+			  <ul>
+			    <li><a href="http://github.com/wbotelhos/${slug}/archive/${version}.zip" title="Download" class="download"><i class="icon-download icon-large"></i>v${version}</a></li>
+          <li><a href="http://github.com/wbotelhos/${slug}" title="Github" target="_blank"><i class="icon-github icon-large"></i>Github</a></li>
+          <li><a href="http://wbotelhos.com/labs" title="yLab" target="_blank"><i class="icon-beaker icon-large"></i>yLab</a></li>
+          <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X8HEP2878NDEG&amp;item_name=jQuery%20${name}" title="Donate" target="_blank"><i class="icon-heart-empty icon-large"></i>Donate</a></li>
+			  </ul>
+			</nav>
+		</header>
 
-			<a id="coffee" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=X8HEP2878NDEG&amp;item_name=jQuery%20${NAME}" target="_blank">buy me a coffee</a>
+    <div id="container">
+      <section role="main">
+        <article>
+          <h2 id="default">
+            <a href="#default">Default:</a>
+          </h2>
 
-			<div class="description">jQuery <strong>${NAME}</strong> ${FULL_DESCRIPTION}</div>
-		</div>
+          <p>${explanation}</p>
 
-		<div id="content">
-			<table id="${NAME_LOWER}"></table>
+          <div class="demo">
+            ${demo}
+          </div>
 
-			<div class="session-first">${SESSION}:</div>
+<div class="highlight">
+<pre>
 
-			<div class="session-option">${ATTRIBUTE}: <span>${VALUE_DEFAULT}</span></div>
+</pre>
+</div>
+          <h2 id="global">
+            <a href="#global">Changing the settings globally:</a>
+          </h2>
 
-			<img src="doc/img/${ATTRIBUTE}.png" alt="${ATTRIBUTE}" height="yy" width="xxx" class="session-image" />
+          <p>
+            You can change any option mentioning the scope <code>$.fn.${slug}.defaults.</code> + <i>option_name</i>. It must be called before you bind the plugin.
+          </p>
 
-			<div class="source">
-				$('#${NAME_LOWER}').${NAME_LOWER}({<br />
-				&#160;&#160;<span class="highlight">${ATTRIBUTE}: ${VALUE_CUSTOM}</span><br />
-				});
-			</div>
+<div class="highlight">
+<pre>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">${slug}</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">${globally_key_1}</span> <span class="o">=</span> <span class="s1">${globally_value_1}</span><span class="p">;</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">${slug}</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">${globally_key_2}</span> <span class="o">=</span> <span class="s1">${globally_value_1}</span><span class="p">;</span>
+</pre>
+</div>
 
-			<div class="comment">${DESCRIPTION}</div>
-			<div class="comment-personal">Example: ${EXAMPLE}.</div>
+          <h2 id="options">
+            <a href="#options">Options:</a>
+          </h2>
 
-			<hr />
+          <div id="xpto" class="option">
+            <div>xpto: <span>'xpto'</span></div>
+            <p>xpto</p>
+          </div>
 
-			<div id="global-demo" class="session">Changing the settings globally:</div>
+          <h2 id="functions">
+            <a href="#functions">Functions:</a>
+          </h2>
 
-			<div class="source">
-				$.fn.catchy.defaults.${OPTION_1} = ${OPTION_1_VALUE};<br/>
-				$.fn.catchy.defaults.${OPTION_2} = ${OPTION_1_VALUE};
-			</div>
+          <div id="set" class="function">
+<div class="highlight">
+<pre>
 
-			<span class="comment">
-				- You can change any option mention the scope <b>$.fn.${NAME_LOWER}.defaults.</b> + <i>option_name</i>;<br/>
-				- This setup must be called before you bind the ${NAME}, of course.
-			</span>
+</pre>
+</div>
 
-			<div class="session">Public functions:</div>
+            <p>xpto</p>
+          </div>
 
-			<div class="source">$('#${NAME_LOWER}').${NAME_LOWER}('${METHOD}');</div>
-			<div class="description-code">.</div>
-		</div>
+          <h2 id="tests">
+            <a href="#tests">Tests:</a>
+          </h2>
 
-		<div id="footer">
-			<div>&copy; 2012 <a href="http://www.wbotelhos.com" target="_blank">wbotelhos.com</a></div>
-		</div>
+          <p>
+            This plugin is tested to work better.
+            <a href="http://wbotelhos.com/${slug}/spec/run.html" target="_blank">Check it out!</a>
+          </p>
 
-		<script type="text/javascript">
-			$(function() {
+        </article>
+      </section>
 
-				$('#${NAME_LOWER}').${NAME_LOWER}({ });
+      <div class="author">
+        <img title="Washington Botelho" src="http://www.gravatar.com/avatar/00c9b483d3c58a12c5f256cf2770d0b8?d=mm" alt="">
+        <div class="biography">
+          <p>
+            Ruby, Java and Python Developer in <a href="http://r7.com" title="R7.com" target="_blank">R7.com</a> Portal.<br />
+            Bachelor's in Information Systems and certified OCJA 1.0 and OCJP 6.<br />
+            Helper and learner of the open source community, and designer adventurer.<br />
+            Also has a passion for dance, skate, jiu-jitsu and Counter Strike Source. (:
+          </p>
+        </div>
 
-			});
-		</script>
-	</body>
+        <div class="social">
+          <a href="http://github.com/wbotelhos" title="http://github.com/wbotelhos" target="_blank" class="github"></a>
+          <a href="http://linkedin.com/in/wbotelhos" title="http://linkedin.com/in/wbotelhos" target="_blank" class="linkedin"></a>
+          <a href="http://twitter.com/wbotelhos" title="http://twitter.com/wbotelhos" target="_blank" class="twitter"></a>
+          <a href="http://facebook.com/wbotelhos" title="http://facebook.com/wbotelhos" target="_blank" class="facebook"></a>
+        </div>
+      </div>
+    </div>
+
+    <footer role="contentinfo">
+      &copy; 2012 <a href="http://wbotelhos.com" title="wbotelhos.com">wbotelhos.com</a>
+    </footer>
+  </div>
+
+  <script type="text/javascript">
+    $(function() {
+      $('#default').${slug}();
+    });
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-${analytics}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
 </html>
