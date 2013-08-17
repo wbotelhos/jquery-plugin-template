@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width; initial-scale=1; maximum-scale=1" name="viewport">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 
-  <title>JQuery ${name}</title>
+  <title>JQuery ${name} - ${title}</title>
 
   <meta content="Washington Botelho" name="author">
   <meta content="jQuery ${name} - ${title}" name="description">
@@ -16,7 +16,7 @@
   <link type="text/css" rel="stylesheet" href="lib/jquery.${slug}.css" />
 
   <script type="text/javascript" src="demo/js/jquery.min.js"></script>
-	<script type="text/javascript" src="lib/jquery.${slug}.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.${slug}.js"></script>
 
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 </head>
@@ -84,14 +84,14 @@
             <a href="#functions">Functions:</a>
           </h2>
 
-          <div id="set" class="function">
+          <div id="${function_name}" class="function">
 <div class="highlight">
 <pre>
-
+${function_example}
 </pre>
 </div>
 
-            <p>xpto</p>
+            <p>${function_description}</p>
           </div>
 
           <h2 id="tests">

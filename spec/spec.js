@@ -1,43 +1,33 @@
-function context(description, spec) {
-  describe(description, spec);
-};
-
 describe('${name}', function() {
-
   beforeEach(function() {
-    $('body').append('${demo}');
+    Helper.html('${demo}');
   });
 
-  afterEach(function() {
-    $('#${selector}').remove();
+  afterEach(function() { Helper.clear(); });
+
+  describe('options', function() {
+    it ('has the right value options', function() {
+      // given
+      var ${slug} = $.fn.${slug}
+
+      // when
+      var opt = ${slug}.defaults
+
+      // then
+      expect(opt.${name}).toBeTruthy();
+    });
   });
 
   describe('channing', function() {
     it ('is chainable', function() {
       // given
-      var ${selector}  = $('#${selector}'),
-          clazz  = 'some-class';
+      var self = $('${selector}');
 
       // when
-      ${selector}.${slug}().addClass(clazz);
+      var ref = self.${slug}();
 
       // then
-      expect(${selector}).toHaveClass(clazz);
-    });
-  });
-
-  describe('clazz option', function() {
-    context('with default value', function() {
-      it ('set it to wrapper', function() {
-        // given
-        var ${selector} = $('#${selector}');
-
-        // when
-        ${selector}.${slug}();
-
-        // then
-        expect(${selector}).toHaveClass('${slug}');
-      });
+      expect(ref).toBe(self);
     });
   });
 
