@@ -1,44 +1,35 @@
-describe('${name}', function() {
+describe('{{name}}', function() {
   beforeEach(function() {
-    Helper.html('${demo}');
+    Helper.html('{{demo_html}}');
   });
 
-  afterEach(function() { Helper.clear(); });
+  afterEach(function() {
+    Helper.clear();
+  });
 
   describe('options', function() {
     it ('has the right value options', function() {
       // given
-      var ${slug} = $.fn.${slug}
+      var self = $.fn.{{slug}}
 
       // when
-      var opt = ${slug}.defaults
+      var opt = {{slug}}.defaults
 
       // then
-      expect(opt.${name}).toBeTruthy();
+      expect(opt.foo).toBeTruthy();
     });
   });
 
   describe('channing', function() {
     it ('is chainable', function() {
       // given
-      var self = $('${selector}');
+      var self = $('{{slug}}');
 
       // when
-      var ref = self.${slug}();
+      var ref = self.{{slug}}();
 
       // then
       expect(ref).toBe(self);
     });
-  });
-
-  it ('does not bind twice', function() {
-    // given
-    var ${selector} = $('#${selector}');
-
-    // when
-    ${selector}.${slug}();
-
-    // then
-    expect(${selector}).toHaveClass('${slug}');
   });
 });

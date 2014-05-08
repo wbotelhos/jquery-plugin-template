@@ -1,15 +1,9 @@
-# jQuery ${name} - ${title} - http://wbotelhos.com/${slug}
+# jQuery {{name}} - {{title}} - http://{{domain}}/{{slug}}
 
-## ${version}
+## {{version}}
 
 ### News
 
-${news}
-
 ### Changes
 
-${changes}
-
 ### Fixes
-
-${fixes}

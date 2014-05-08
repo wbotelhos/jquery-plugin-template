@@ -1,46 +1,45 @@
-# jQuery ${name} - ${title} - [wbotelhos.com/${slug}](http://wbotelhos.com/${slug})
+# jQuery {{name}} - {{title}} - [http://{{domain}}/{{slug}}](http://{{domain}}/{{slug}})
 
-jQuery ${name} ${description}
+jQuery {{name}} {{description}}
 
 ## Version
 
 ```
-@version        ${version}
-@since          ${since}
-@author         Washington Botelho
-@documentation  wbotelhos.com/${slug}
-@twitter        twitter.com/wbotelhos
+@version  {{version}}
+@since    {{since}}
+@author   {{author}}
+@doc      http://{{domain}}/{{slug}}
 ```
 
 ## Required Files
 
-+ jquery.${slug}.css
-+ jquery.${slug}.js
++ jquery.{{slug}}.css
++ jquery.{{slug}}.js
 
 ## Options
 
 ```js
-${options}
+{{options}}
 ```
 
 ## Usage
 
 ```html
-${usage_html}
+{{demo_html}}
 ```
 
 ```js
-${usage_js}
+{{demo_js}}
 ```
 ## Functions
 
 ```js
-${functions}
+{{functions}}
 ```
 
 ## Contributors
 
-${contributors}
+{{contributors}}
 
 ## Licence
 
@@ -48,4 +47,4 @@ The MIT License
 
 ## Donate
 
-You can do it via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=X8HEP2878NDEG&item_name=jQuery%20${name}). Thanks! (:
+You can do it via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business={{paypal}}&item_name=jQuery%20{{name}}). Thanks! (:
